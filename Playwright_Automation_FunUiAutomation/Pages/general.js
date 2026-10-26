@@ -122,6 +122,17 @@ export class General {
         this.pitWall_Logs = page.locator('#live-feed-log');
         this.pitWall_Reset = page.locator('#live-feed-reset');
         this.pitWall_End = page.locator('#live-feed-end');
+
+        //elements of revolving door page
+        this.revolvingDoor_btnCycleDoor = page.locator('#stale-element-cycle');
+        this.revolvingDoor_autoCycle = page.locator('#stale-element-auto');
+        this.revolvingDoor_Count = page.locator('#stale-element-count');
+        this.revolvingDoor_Result = page.locator('#stale-element-result');
+        this.revolvingDoor_guest1 = page.locator('#stale-element-guest-1');
+        this.revolvingDoor_guest2 = page.locator('#stale-element-guest-2');
+        this.revolvingDoor_guest3 = page.locator('#stale-element-guest-3');
+        this.revolvingDoor_guest4 = page.locator('#stale-element-guest-4');
+        this.revolvingDoor_guestList = page.locator('[data-testid="stale-element-guest"]');
     }
 
     //-------------------------------------Url Sections Start-------------------------------------
