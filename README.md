@@ -10,6 +10,7 @@ I use this repository to practice automating web applications, testing UI elemen
 - **RealBugz**
 - **QA Practice**
 - More websites will be added as I continue learning.
+git merge-base main origin/main
 
 ## Technologies Used
 
