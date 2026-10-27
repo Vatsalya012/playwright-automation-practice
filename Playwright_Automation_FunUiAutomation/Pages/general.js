@@ -262,8 +262,14 @@ export class General {
 
 
     //base url function of house sigils page
-    async goto_HouseSigilsUrl(){
+    async goto_HouseSigilsUrl() {
         await this.page.goto('https://funui.dev/challenges/hovers');
+    }
+
+
+    //base url function of throttle lever page
+    async goto_ThrottleLeverUrl() {
+        await this.page.goto('https://funui.dev/challenges/slider');
     }
 
     //-------------------------------------Url Sections End-------------------------------------
