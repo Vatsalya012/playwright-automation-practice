@@ -9,6 +9,7 @@ test.beforeEach('open the ring bearer page', async ({ page }) => {
 })
 
 
+//checking all the elements of ring bearer page
 test('testing all the elements of the ring bearer page', async ({ page }) => {
     // await page.pause();
     await expect(general.ringBearer_columnA).toBeVisible();
@@ -31,31 +32,33 @@ test('testing all the elements of the ring bearer page', async ({ page }) => {
 })
 
 
+//checking ring drag and drop with mouse
 test('testing drag and drop event of ring', async ({ page }) => {
     // await page.pause();
     await general.ringBearer_Ring.hover();
     await page.mouse.down();
     await general.ringBearer_columnB.hover();
     await page.mouse.up();
-    expect(page.getByText('A — The Shire')).toBeTruthy();
-    expect(page.getByText('B — Mount Doom (ring here)')).toBeTruthy();
+    await expect(page.getByText('A — The Shire')).toBeVisible();
+    await expect(page.getByText('B — Mount Doom (ring here)')).toBeVisible();
     await general.ringBearer_Ring.dragTo(general.ringBearer_columnA);
-    expect(page.getByText('A — The Shire (ring here)')).toBeTruthy;
-    expect(page.getByText('B — Mount Doom')).toBeTruthy;
+    await expect(page.getByText('A — The Shire (ring here)')).toBeVisible();
+    await expect(page.getByText('B — Mount Doom')).toBeVisible();
 })
 
 
+//checking the order sequence after drag and drop items
 test('testing the list order sequence with drag and drop', async ({ page }) => {
     // await page.pause();
     await general.ringBearer_Member.nth(5).hover();
     await page.mouse.down();
     await general.ringBearer_Member.nth(0).hover();
     await page.mouse.up();
-    expect(page.getByText('1.Legolan')).toBeTruthy();
-    expect(page.getByText('2.Frodmund')).toBeTruthy();
-    expect(page.getByText('3.Samgar')).toBeTruthy();
-    expect(page.getByText('4.Gandor the Grey')).toBeTruthy();
-    expect(page.getByText('5.Aravorn')).toBeTruthy();
-    expect(page.getByText('6.Gimlin')).toBeTruthy();
+    await expect(page.getByText('1. Legolan')).toBeVisible();
+    await expect(page.getByText('2. Frodmund')).toBeVisible();
+    await expect(page.getByText('3. Samgar')).toBeVisible();
+    await expect(page.getByText('4. Gandor the Grey')).toBeVisible();
+    await expect(page.getByText('5. Aravorn')).toBeVisible();
+    await expect(page.getByText('6. Gimlin')).toBeVisible();
     await expect(general.ringBearer_Order).toHaveText('Legolan, Frodmund, Samgar, Gandor the Grey, Aravorn, Gimlin');
 })

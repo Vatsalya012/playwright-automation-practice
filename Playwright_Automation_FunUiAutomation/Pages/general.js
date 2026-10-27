@@ -141,6 +141,15 @@ export class General {
         this.ringBearer_Member = page.locator('[data-testid="dnd-member"]');
         this.ringBearer_Order = page.locator('#dnd-order');
         this.ringBearer_Fellowship = page.locator('#dnd-fellowship');
+
+        //elements of hover sigils page
+        this.hoverSigil_Sigils = page.locator('[data-testid="hovers-sigil"]');
+        this.hoverSigil_sigil1 = page.locator('#hovers-sigil-1');
+        this.hoverSigil_sigil1Profile = page.locator('#hovers-profile-link-1');
+        this.hoverSigil_sigil2 = page.locator('#hovers-sigil-2');
+        this.hoverSigil_sigil2Profile = page.locator('#hovers-profile-link-2');
+        this.hoverSigil_sigil3 = page.locator('#hovers-sigil-3');
+        this.hoverSigil_sigil3Profile = page.locator('#hovers-profile-link-3');
     }
 
     //-------------------------------------Url Sections Start-------------------------------------
@@ -249,6 +258,12 @@ export class General {
     //base url function of ring bearer page
     async goto_RingBearerUrl() {
         await this.page.goto('https://funui.dev/challenges/drag-and-drop');
+    }
+
+
+    //base url function of house sigils page
+    async goto_HouseSigilsUrl(){
+        await this.page.goto('https://funui.dev/challenges/hovers');
     }
 
     //-------------------------------------Url Sections End-------------------------------------
