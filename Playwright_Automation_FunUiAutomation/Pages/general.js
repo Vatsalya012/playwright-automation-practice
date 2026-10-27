@@ -133,6 +133,14 @@ export class General {
         this.revolvingDoor_guest3 = page.locator('#stale-element-guest-3');
         this.revolvingDoor_guest4 = page.locator('#stale-element-guest-4');
         this.revolvingDoor_guestList = page.locator('[data-testid="stale-element-guest"]');
+
+        //elements of ring bearer page
+        this.ringBearer_columnA = page.locator('#dnd-column-a');
+        this.ringBearer_columnB = page.locator('#dnd-column-b');
+        this.ringBearer_Ring = page.locator('#dnd-ring');
+        this.ringBearer_Member = page.locator('[data-testid="dnd-member"]');
+        this.ringBearer_Order = page.locator('#dnd-order');
+        this.ringBearer_Fellowship = page.locator('#dnd-fellowship');
     }
 
     //-------------------------------------Url Sections Start-------------------------------------
@@ -235,6 +243,12 @@ export class General {
     //base url function of revolving door page
     async goto_RevolvingDoorUrl() {
         await this.page.goto('https://funui.dev/challenges/stale-element');
+    }
+
+
+    //base url function of ring bearer page
+    async goto_RingBearerUrl() {
+        await this.page.goto('https://funui.dev/challenges/drag-and-drop');
     }
 
     //-------------------------------------Url Sections End-------------------------------------
