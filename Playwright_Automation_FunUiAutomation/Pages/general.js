@@ -150,6 +150,13 @@ export class General {
         this.hoverSigil_sigil2Profile = page.locator('#hovers-profile-link-2');
         this.hoverSigil_sigil3 = page.locator('#hovers-sigil-3');
         this.hoverSigil_sigil3Profile = page.locator('#hovers-profile-link-3');
+
+        //elements of the throttle lever page
+        this.throttleLever_autoPilot = page.locator('#slider-native');
+        this.throttleLever_autoPilotValue = page.locator('#slider-native-value');
+        this.throttleLever_customPilot = page.locator('#slider-custom-handle');
+        this.throttleLever_customPilotValue = page.locator('#slider-custom-value');
+        this.throttleLever_Result = page.locator('#slider-result');
     }
 
     //-------------------------------------Url Sections Start-------------------------------------
