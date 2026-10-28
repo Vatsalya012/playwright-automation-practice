@@ -279,6 +279,12 @@ export class General {
         await this.page.goto('https://funui.dev/challenges/slider');
     }
 
+
+    //base url function of speakeasy door page
+    async goto_SpeakeasyDoorUrl() {
+        await this.page.goto('https://funui.dev/challenges/context-menu');
+    }
+
     //-------------------------------------Url Sections End-------------------------------------
 
 
