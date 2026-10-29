@@ -157,6 +157,15 @@ export class General {
         this.throttleLever_customPilot = page.locator('#slider-custom-handle');
         this.throttleLever_customPilotValue = page.locator('#slider-custom-value');
         this.throttleLever_Result = page.locator('#slider-result');
+
+        //elements of the speakeasy door page
+        this.speakeasyDoor_btnDoor = page.locator('#context-menu-door');
+        this.speakeasyDoor_btnKnock = page.locator('#context-menu-knocker');
+        this.speakeasyDoor_Result = page.locator('#context-menu-result');
+        this.speakeasyDoor_Popup = page.locator('#context-menu-popup');
+        this.speakeasyDoor_btnItem1 = page.locator('#context-menu-item-1');
+        this.speakeasyDoor_btnItem2 = page.locator('#context-menu-item-2');
+        this.speakeasyDoor_btnItem3 = page.locator('#context-menu-item-3');
     }
 
     //-------------------------------------Url Sections Start-------------------------------------
